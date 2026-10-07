@@ -1,0 +1,26 @@
+{
+  "name": "office-3d-hub-pro",
+  "version": "1.0.0",
+  "description": "Office 3D Hub — a white-label, multi-workspace 3D office for remote teams (hosted or self-hosted).",
+  "main": "server/index.js",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "workspace": "node server/cli.js",
+    "test": "node --test \"test/*.test.js\""
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.4",
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.4"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}

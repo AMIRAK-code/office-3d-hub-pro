@@ -1,0 +1,6 @@
+node_modules/
+data/
+.env
+*.log
+marketing/ad/node_modules/
+marketing/ad/out/

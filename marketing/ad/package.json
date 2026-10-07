@@ -1,0 +1,16 @@
+{
+  "name": "office-board-ad",
+  "private": true,
+  "type": "module",
+  "description": "Renders the 30-second ads by driving the real Office Board app frame by frame.",
+  "scripts": {
+    "render": "node record.mjs",
+    "render:landscape": "node record.mjs landscape",
+    "render:vertical": "node record.mjs vertical",
+    "preview": "node record.mjs --serve"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "playwright-core": "^1.63.0"
+  }
+}

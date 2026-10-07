@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Office 3D Hub — ad</title>
+  <script src="/ad/time-shim.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/ad/ad.css">
+  <script type="importmap">
+    { "imports": { "three": "/vendor/three/build/three.module.js", "three/addons/": "/vendor/three/addons/" } }
+  </script>
+</head>
+<body>
+  <!-- Same skeleton as the real app (public/index.html) so its modules work unchanged -->
+  <div id="stage"></div>
+  <div id="labels" class="layer"></div>
+  <div id="fx-layer" class="layer"></div>
+  <div id="hud" class="hidden"></div>
+  <div id="panel-root"></div>
+  <div id="cursors" class="layer"></div>
+  <div id="toasts" aria-live="polite"></div>
+  <div id="login" class="hidden"></div>
+  <div id="boot" class="gone"></div>
+  <!-- Ad-only layers -->
+  <div id="ad-overlay" aria-hidden="true">
+    <div id="ad-fade"></div>
+    <div id="ad-live"></div>
+    <div id="ad-captions"></div>
+    <div id="ad-end"></div>
+  </div>
+  <script type="module" src="/ad/ad.js"></script>
+</body>
+</html>

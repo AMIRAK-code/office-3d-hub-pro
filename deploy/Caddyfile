@@ -1,0 +1,22 @@
+# Caddy terminates HTTPS and forwards to the app (WebSockets included).
+#
+# Hosted mode: every workspace subdomain AND every customer's custom domain gets a certificate
+# automatically, but only after the app confirms the domain belongs to an active workspace.
+{
+	on_demand_tls {
+		ask http://app:3000/_platform/tls-check
+	}
+}
+
+https:// {
+	tls {
+		on_demand
+	}
+	reverse_proxy app:3000
+}
+
+# Dedicated (single-office) install instead: delete everything above and use
+#
+# office.acme.com {
+# 	reverse_proxy app:3000
+# }
